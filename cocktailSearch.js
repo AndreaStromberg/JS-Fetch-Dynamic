@@ -33,13 +33,17 @@ const cocktailSearch = () => {
       // Hämtar namn för olika grejer från egenskaperna på objekten i arrayen som skapas
       const drinkName = drink.strDrink
       const drinkThumb = drink.strDrinkThumb
+      const drinkInstructions = drink.strInstructions
 
       const drinkElement = document.createElement("div")
+      drinkElement.classList.add("drink")
 
       const drinkTemplate = `
         <h2>${drinkName}</h2>
 
         <img src="${drinkThumb}">
+        <div>${drinkInstructions}</div>
+        
         `
 
       drinkElement.innerHTML = drinkTemplate
